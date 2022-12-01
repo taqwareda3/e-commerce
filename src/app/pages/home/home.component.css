@@ -1,32 +1,26 @@
 .body{
   background-color: black;
 }
-.container{
-  padding-left: 15px;
-  padding-right:15px;
-  margin-left: auto;
-  margin-right: auto;
 
-}
-@media(min-width:768px){
-  .container{
-    width: 750px;
-  }
-}
-@media(min-width: 992px){
-  .container{
-    width: 970px;
-  }
-}
-@media(min-width:1120px){
-  .container{
-    width: 1170px;
-  }
-}
 /* header */
 .nav-header{
   position: absolute;
   left: 0;
   width: 100%;
-  background: black;
+
+}
+.landing{
+  background-color: aqua;
+    min-height: 100vh;
+    background-size: cover;
+  background-image: url(./../../../assets/images/cover.jpeg);
+
+}
+.overlay{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  min-height: 100%;
+  background-color: #00000040;
 }
