@@ -1,6 +1,6 @@
 /* start variables */
-::ng-deep :root{
-  --main-color:#19c8fa
+::ng-deep :root {
+  --main-color: #19c8fa;
 }
 /* end variables */
 .navbar {
@@ -20,45 +20,71 @@
   left: 0px;
 }
 /* logo */
-.logo img{
+.logo img {
   height: 40px;
 }
-nav{
+nav {
   flex: 1;
   display: flex;
   align-items: center;
-justify-content: flex-end;
+  justify-content: flex-end;
 }
-nav ul{
+nav .toggle-menu {
+  color: white;
+  font-size: 22px;
+  margin: 10px;
+}
+@media (min-width: 768px) {
+  .toggle-menu {
+    display: none;
+  }
+}
+nav ul {
   display: flex;
 }
-li{
+@media (max-width: 767px) {
+  nav ul {
+    display: none;
+  }
+  nav .toggle-menu:hover +ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    /* left: 0; */
+    right: 0px;
+    top: 64%;
+    background-color: rgba(0, 0, 0, 0.678);
+    padding: 15px;
+  }
+
+}
+li {
   list-style: none;
 }
-ul li a{
+ul li a {
   display: block;
   text-decoration: none;
-  color:   white;
+  color: white;
   padding: 20px 20px;
   transition: 0.3s;
   /* position: relative;
   z-index: 2; */
 }
 ul li .active,
-ul li a:hover
-{
+ul li a:hover {
   color: var(--main-color);
   border-bottom: 1px solid var(--main-color);
 }
-.search{
+.search {
   width: 40px;
   height: 30px;
   border-left: 1px solid white;
   position: relative;
 }
-.search i{
+.search i {
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translateY(-10px)
+  transform: translateY(-10px);
 }
